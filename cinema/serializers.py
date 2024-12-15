@@ -15,6 +15,7 @@ class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
         fields = "__all__"
+        read_only_fields = ("id",)
 
 
 class ActorSerializer(serializers.ModelSerializer):

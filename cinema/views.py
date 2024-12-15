@@ -27,7 +27,6 @@ from cinema.serializers import (
 class GenreViewSet(viewsets.ModelViewSet):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
-    read_only_fields = "id"
 
 
 class ActorViewSet(viewsets.ModelViewSet):
@@ -57,7 +56,7 @@ class OrderViewSet(viewsets.ModelViewSet):
 
 
 class TicketViewSet(viewsets.ModelViewSet):
-    queryset = Ticket.objects.all().select_related().select_related()
+    queryset = Ticket.objects.all().select_related()
     serializer_class = TicketSerializer
 
 
